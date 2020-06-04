@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
   
 def won?(board)
   WIN_COMBINATIONS.any? do |win_combination|
-   board[win_combination].all? |pos|
+   board[win_combination].all? do |pos|
     if pos == "X" || pos == "O" 
    #if board[win_combination[0]] == "X" && board[win_combination[1]] == "X" && board[win_combination[2]] == "X" 
      return win_combination
